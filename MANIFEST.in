@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include plant_equipment *.css
+recursive-include plant_equipment *.csv
+recursive-include plant_equipment *.html
+recursive-include plant_equipment *.ico
+recursive-include plant_equipment *.js
+recursive-include plant_equipment *.json
+recursive-include plant_equipment *.md
+recursive-include plant_equipment *.png
+recursive-include plant_equipment *.py
+recursive-include plant_equipment *.svg
+recursive-include plant_equipment *.txt
+recursive-exclude plant_equipment *.pyc
