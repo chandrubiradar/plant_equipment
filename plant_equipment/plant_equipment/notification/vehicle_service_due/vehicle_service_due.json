@@ -1,0 +1,34 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition": "",
+ "creation": "2023-05-11 21:20:03.988094",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Vehical List",
+ "enabled": 1,
+ "event": "Save",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Add your message here",
+ "method": "after_update",
+ "modified": "2023-05-11 21:23:16.295396",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Vehicle Service Due",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "condition": "",
+   "receiver_by_role": "System Manager"
+  },
+  {
+   "receiver_by_role": "All"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "{{ doc.vehicle_no }}'s service Due",
+ "value_changed": "stl_compliance_expiry"
+}

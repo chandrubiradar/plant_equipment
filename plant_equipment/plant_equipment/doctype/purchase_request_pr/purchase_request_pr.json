@@ -1,0 +1,229 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-09 00:16:54.010327",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "pr_no",
+  "date",
+  "delivery_to",
+  "column_break_4",
+  "divdept",
+  "contract_ref",
+  "jobeqno",
+  "data_8",
+  "pr_table",
+  "section_break_10",
+  "priority",
+  "normal",
+  "urgent",
+  "required_date",
+  "column_break_14",
+  "intended_use_of_material",
+  "section_break_17",
+  "standarad_quality_requirement",
+  "data_sheets__safety_andor__information",
+  "letter_of_confirmity",
+  "material__equipment_certification",
+  "warranty_and_guarantee_certificate",
+  "halal_certificate",
+  "column_break_24",
+  "for_psd_use_only",
+  "po",
+  "vendor",
+  "column_break_28",
+  "for_mashhor_general_contractor",
+  "initiator",
+  "approved_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "pr_no",
+   "fieldtype": "Data",
+   "label": "PR NO"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "delivery_to",
+   "fieldtype": "Data",
+   "label": "Delivery To"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "divdept",
+   "fieldtype": "Data",
+   "label": "Div/Dept"
+  },
+  {
+   "fieldname": "contract_ref",
+   "fieldtype": "Data",
+   "label": "Contract Ref"
+  },
+  {
+   "fieldname": "jobeqno",
+   "fieldtype": "Data",
+   "label": "Job/Eq.no"
+  },
+  {
+   "fieldname": "data_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pr_table",
+   "fieldtype": "Table",
+   "label": "PR Table",
+   "options": "Purchase Request Table"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Heading",
+   "label": "Priority"
+  },
+  {
+   "default": "0",
+   "fieldname": "normal",
+   "fieldtype": "Check",
+   "label": "Normal"
+  },
+  {
+   "default": "0",
+   "fieldname": "urgent",
+   "fieldtype": "Check",
+   "label": "Urgent"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "intended_use_of_material",
+   "fieldtype": "Text",
+   "label": "Intended Use of Material"
+  },
+  {
+   "fieldname": "required_date",
+   "fieldtype": "Date",
+   "label": "Required Date"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "standarad_quality_requirement",
+   "fieldtype": "Heading",
+   "label": "STANDARAD QUALITY REQUIREMENT"
+  },
+  {
+   "default": "0",
+   "fieldname": "data_sheets__safety_andor__information",
+   "fieldtype": "Check",
+   "label": "Data Sheets - Safety and/or  information"
+  },
+  {
+   "default": "0",
+   "fieldname": "letter_of_confirmity",
+   "fieldtype": "Check",
+   "label": "Letter of Confirmity"
+  },
+  {
+   "default": "0",
+   "fieldname": "material__equipment_certification",
+   "fieldtype": "Check",
+   "label": "Material / Equipment Certification"
+  },
+  {
+   "default": "0",
+   "fieldname": "warranty_and_guarantee_certificate",
+   "fieldtype": "Check",
+   "label": "Warranty and Guarantee Certificate"
+  },
+  {
+   "default": "0",
+   "fieldname": "halal_certificate",
+   "fieldtype": "Check",
+   "label": "Halal Certificate"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "for_psd_use_only",
+   "fieldtype": "Heading",
+   "label": "For PSD Use Only"
+  },
+  {
+   "fieldname": "po",
+   "fieldtype": "Data",
+   "label": "PO"
+  },
+  {
+   "fieldname": "vendor",
+   "fieldtype": "Data",
+   "label": "Vendor"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "for_mashhor_general_contractor",
+   "fieldtype": "Heading",
+   "label": "For Mashhor General Contractor"
+  },
+  {
+   "fieldname": "initiator",
+   "fieldtype": "Data",
+   "label": "Initiator"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Data",
+   "label": "Approved By"
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Contract"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-25 15:21:48.400425",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Purchase Request PR",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

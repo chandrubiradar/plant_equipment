@@ -1,0 +1,157 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2023-07-28 19:45:41.209211",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "P&E",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Plant and Equipment",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Assets",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicle List",
+   "link_to": "Vehicle List",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Heavy Vehicle",
+   "link_to": "Heavy Vehicle",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Equipment",
+   "link_to": "Equipment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tools",
+   "link_to": "Tool PE",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Asset Services",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicle Service",
+   "link_to": "Vehicle Service",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Heavy Vehicle Service",
+   "link_to": "Heavy Vehicle Service",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Equipment Service",
+   "link_to": "Equipment Services",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tools Inspection",
+   "link_to": "Tools Inspection and Certificate",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2023-07-28 19:57:51.126086",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Plant and Equipment",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "",
+   "label": "Contracts",
+   "link_to": "Contract",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Items",
+   "link_to": "Item",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "ARS",
+   "link_to": "Access Request Sheet",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Fixed Asset Proposal",
+   "link_to": "Fixed Asset Proposal",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Fixed Asset Disposal",
+   "link_to": "Fixed Asset Disposal",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Vehicle",
+   "link_to": "Vehicle List",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Equipment",
+   "link_to": "Equipment",
+   "type": "DocType"
+  }
+ ]
+}

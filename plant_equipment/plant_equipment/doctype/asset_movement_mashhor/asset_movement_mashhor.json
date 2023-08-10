@@ -1,0 +1,641 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "format:ACC-ASM-{YYYY}-{#####}",
+ "creation": "2023-05-15 21:10:56.383191",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "purpose",
+  "column_break_4",
+  "contract",
+  "transaction_date",
+  "permanent_transfer",
+  "temporarily_tranfer",
+  "project_duration",
+  "mention_the_duration",
+  "section_break_10",
+  "equipment",
+  "equipment_table",
+  "light_vehicle",
+  "vehicle_table",
+  "tools",
+  "tools_table",
+  "consumables",
+  "consumables_table",
+  "reference",
+  "reference_doctype",
+  "column_break_9",
+  "reference_name",
+  "asset_details_section",
+  "year_build",
+  "date_purchased",
+  "po_ref_number",
+  "column_break_19",
+  "value",
+  "current_value",
+  "your_ref_no",
+  "section_break_23",
+  "condition_please_tick_where_necessary",
+  "excellent",
+  "very_good",
+  "good",
+  "average",
+  "poor",
+  "needs_repair",
+  "propose_to_dispose",
+  "column_break_32",
+  "please_specify_the_condition_details",
+  "list_out_any_spare_parts_accessories",
+  "section_break_35",
+  "reason_for_handover",
+  "text_37",
+  "column_break_38",
+  "approval_by_director_please_tick_for_approval",
+  "chairman",
+  "data_41",
+  "business_dev_director",
+  "data_43",
+  "operations_director",
+  "data_45",
+  "fin__admin_director",
+  "data_47",
+  "section_break_48",
+  "handed_over_by",
+  "date_handover",
+  "employee1",
+  "name1",
+  "position",
+  "divisiondept",
+  "image_63",
+  "signature",
+  "column_break_55",
+  "taken_over_by",
+  "date_handover1",
+  "employee2",
+  "name2",
+  "position1",
+  "divisiondept1",
+  "image_72",
+  "signature1",
+  "asset_management_dept_column_section",
+  "update_record",
+  "inspection__check",
+  "re_new_code_no",
+  "send_for_repair",
+  "column_break_67",
+  "ref_code_no",
+  "date_entry",
+  "date_dispose",
+  "column_break_71",
+  "verified__endrosed_by_asset_manager",
+  "signature_73",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "remember_last_selected_value": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Select",
+   "label": "Purpose",
+   "options": "\nIssue\nReceipt\nTransfer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transaction_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Transaction Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Assets"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "reference",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "label": "Reference Document Type",
+   "no_copy": 1,
+   "options": "DocType"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Reference Document Name",
+   "no_copy": 1,
+   "options": "reference_doctype"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Asset movement Mashhor",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Asset movement Mashhor",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.purpose == \"Transfer\"",
+   "fieldname": "permanent_transfer",
+   "fieldtype": "Check",
+   "label": "Permanent Transfer"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.purpose == \"Transfer\"",
+   "fieldname": "temporarily_tranfer",
+   "fieldtype": "Check",
+   "label": "Temporarily Transfer"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.purpose == \"Transfer\"",
+   "fieldname": "project_duration",
+   "fieldtype": "Check",
+   "label": "Project Duration"
+  },
+  {
+   "depends_on": "eval:doc.temporarily_tranfer == 1 || doc.project_duration ==1",
+   "fieldname": "mention_the_duration",
+   "fieldtype": "Data",
+   "label": "Mention the Duration"
+  },
+  {
+   "fieldname": "asset_details_section",
+   "fieldtype": "Section Break",
+   "label": "ASSET DETAILS"
+  },
+  {
+   "fieldname": "year_build",
+   "fieldtype": "Data",
+   "label": "Year Build"
+  },
+  {
+   "fieldname": "date_purchased",
+   "fieldtype": "Date",
+   "label": "Date Purchased"
+  },
+  {
+   "fieldname": "po_ref_number",
+   "fieldtype": "Data",
+   "label": "PO Ref. Number"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Data",
+   "label": "Value"
+  },
+  {
+   "fieldname": "current_value",
+   "fieldtype": "Data",
+   "label": "Current Value"
+  },
+  {
+   "fieldname": "your_ref_no",
+   "fieldtype": "Data",
+   "label": "Your Ref No"
+  },
+  {
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "condition_please_tick_where_necessary",
+   "fieldtype": "Heading",
+   "label": "CONDITION (Please tick where necessary)"
+  },
+  {
+   "default": "0",
+   "fieldname": "excellent",
+   "fieldtype": "Check",
+   "label": "Excellent"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good",
+   "fieldtype": "Check",
+   "label": "Very Good"
+  },
+  {
+   "default": "0",
+   "fieldname": "good",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "default": "0",
+   "fieldname": "average",
+   "fieldtype": "Check",
+   "label": "Average"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "default": "0",
+   "fieldname": "needs_repair",
+   "fieldtype": "Check",
+   "label": "Needs Repair"
+  },
+  {
+   "default": "0",
+   "fieldname": "propose_to_dispose",
+   "fieldtype": "Check",
+   "label": "Propose to Dispose"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "please_specify_the_condition_details",
+   "fieldtype": "Text",
+   "label": "Please specify the condition details"
+  },
+  {
+   "fieldname": "list_out_any_spare_parts_accessories",
+   "fieldtype": "Text",
+   "label": "List out any spare parts, accessories,blue-card,road tax, safety kit etc originally provided along with Asset"
+  },
+  {
+   "fieldname": "section_break_35",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reason_for_handover",
+   "fieldtype": "Heading",
+   "label": "REASON FOR HANDOVER"
+  },
+  {
+   "fieldname": "text_37",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "column_break_38",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approval_by_director_please_tick_for_approval",
+   "fieldtype": "Heading",
+   "label": "APPROVAL BY (DIRECTOR) (Please tick for approval)"
+  },
+  {
+   "default": "0",
+   "fieldname": "chairman",
+   "fieldtype": "Check",
+   "label": "Chairman"
+  },
+  {
+   "fieldname": "data_41",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "0",
+   "fieldname": "business_dev_director",
+   "fieldtype": "Check",
+   "label": "Business Dev Director"
+  },
+  {
+   "fieldname": "data_43",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "0",
+   "fieldname": "operations_director",
+   "fieldtype": "Check",
+   "label": "Operations Director"
+  },
+  {
+   "fieldname": "data_45",
+   "fieldtype": "Data"
+  },
+  {
+   "default": "0",
+   "fieldname": "fin__admin_director",
+   "fieldtype": "Check",
+   "label": "Fin / Admin Director"
+  },
+  {
+   "fieldname": "data_47",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "section_break_48",
+   "fieldtype": "Section Break",
+   "label": "TAKE-OVER & HAND-OVER COLUMN"
+  },
+  {
+   "fieldname": "handed_over_by",
+   "fieldtype": "Heading",
+   "label": "Handed Over by"
+  },
+  {
+   "fieldname": "date_handover",
+   "fieldtype": "Date",
+   "label": "Date Handover"
+  },
+  {
+   "fetch_from": "employee1.employee_name",
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fetch_from": "employee1.designation",
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "label": "Position"
+  },
+  {
+   "fieldname": "divisiondept",
+   "fieldtype": "Data",
+   "label": "Division/Dept"
+  },
+  {
+   "fetch_from": "employee1.sign",
+   "fieldname": "signature",
+   "fieldtype": "Attach",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_55",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "taken_over_by",
+   "fieldtype": "Heading",
+   "label": "Taken Over by"
+  },
+  {
+   "fieldname": "date_handover1",
+   "fieldtype": "Date",
+   "label": "Date Handover"
+  },
+  {
+   "fetch_from": "employee2.employee_name",
+   "fieldname": "name2",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fetch_from": "employee2.designation",
+   "fieldname": "position1",
+   "fieldtype": "Data",
+   "label": "Position"
+  },
+  {
+   "fieldname": "divisiondept1",
+   "fieldtype": "Data",
+   "label": "Division/Dept"
+  },
+  {
+   "fetch_from": "employee2.sign",
+   "fieldname": "signature1",
+   "fieldtype": "Attach",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "asset_management_dept_column_section",
+   "fieldtype": "Section Break",
+   "label": "ASSET MANAGEMENT DEPT COLUMN"
+  },
+  {
+   "default": "0",
+   "fieldname": "update_record",
+   "fieldtype": "Check",
+   "label": "Update Record"
+  },
+  {
+   "default": "0",
+   "fieldname": "inspection__check",
+   "fieldtype": "Check",
+   "label": "Inspection  Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "re_new_code_no",
+   "fieldtype": "Check",
+   "label": "Re-new Code no"
+  },
+  {
+   "default": "0",
+   "fieldname": "send_for_repair",
+   "fieldtype": "Check",
+   "label": "Send for repair"
+  },
+  {
+   "fieldname": "column_break_67",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ref_code_no",
+   "fieldtype": "Data",
+   "label": "Ref Code No"
+  },
+  {
+   "fieldname": "date_entry",
+   "fieldtype": "Date",
+   "label": "Date Entry"
+  },
+  {
+   "fieldname": "date_dispose",
+   "fieldtype": "Date",
+   "label": "Date Dispose"
+  },
+  {
+   "fieldname": "column_break_71",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "verified__endrosed_by_asset_manager",
+   "fieldtype": "Data",
+   "label": "Verified & Endrosed by Asset Manager"
+  },
+  {
+   "fieldname": "signature_73",
+   "fieldtype": "Signature"
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Contract"
+  },
+  {
+   "default": "0",
+   "fieldname": "equipment",
+   "fieldtype": "Check",
+   "label": "Equipment and Heavy Vehicle"
+  },
+  {
+   "depends_on": "eval:doc.equipment == 1",
+   "fieldname": "equipment_table",
+   "fieldtype": "Table",
+   "mandatory_depends_on": "eval:doc.equipment == 1",
+   "options": "Asset Movement Equipment Table"
+  },
+  {
+   "default": "0",
+   "fieldname": "light_vehicle",
+   "fieldtype": "Check",
+   "label": "Light Vehicle"
+  },
+  {
+   "default": "0",
+   "fieldname": "tools",
+   "fieldtype": "Check",
+   "label": "Tools"
+  },
+  {
+   "default": "0",
+   "fieldname": "consumables",
+   "fieldtype": "Check",
+   "label": "Consumables"
+  },
+  {
+   "depends_on": "eval:doc.light_vehicle == 1",
+   "fieldname": "vehicle_table",
+   "fieldtype": "Table",
+   "mandatory_depends_on": "eval:doc.light_vehicle == 1",
+   "options": "Asset Movement Light Vehicle Table"
+  },
+  {
+   "depends_on": "eval:doc.tools==1",
+   "fieldname": "tools_table",
+   "fieldtype": "Table",
+   "mandatory_depends_on": "eval:doc.tools==1",
+   "options": "Asset Movement Tools Table"
+  },
+  {
+   "depends_on": "eval:doc.consumables == 1",
+   "fieldname": "consumables_table",
+   "fieldtype": "Table",
+   "mandatory_depends_on": "eval:doc.consumables == 1",
+   "options": "Asset Movement Consumables Table"
+  },
+  {
+   "fieldname": "employee1",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "employee2",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "depends_on": "eval:doc.signature",
+   "fieldname": "image_63",
+   "fieldtype": "Image",
+   "options": "signature"
+  },
+  {
+   "depends_on": "eval:doc.signature1",
+   "fieldname": "image_72",
+   "fieldtype": "Image",
+   "options": "signature1"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-20 15:36:54.751248",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Asset movement Mashhor",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

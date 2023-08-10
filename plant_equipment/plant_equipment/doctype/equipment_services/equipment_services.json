@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Equiment-Service-{####}",
+ "creation": "2023-05-12 16:02:05.141645",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "asset_no",
+  "items",
+  "mileage",
+  "stl_compliance_expiry",
+  "column_break_6",
+  "running_hours",
+  "section_break_12",
+  "description",
+  "column_break_14",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fetch_from": "asset_no.item_name",
+   "fieldname": "items",
+   "fieldtype": "Data",
+   "label": "Item"
+  },
+  {
+   "fieldname": "mileage",
+   "fieldtype": "Data",
+   "label": "Mileage"
+  },
+  {
+   "fieldname": "running_hours",
+   "fieldtype": "Int",
+   "label": "Running Hours"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "asset_no",
+   "fieldtype": "Link",
+   "label": "Asset",
+   "options": "Item"
+  },
+  {
+   "depends_on": "eval:doc.item_type == 'Heavy Vehicle'",
+   "fieldname": "stl_compliance_expiry",
+   "fieldtype": "Date",
+   "label": "STL Compliance Expiry"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-31 17:07:58.612745",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Equipment Services",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

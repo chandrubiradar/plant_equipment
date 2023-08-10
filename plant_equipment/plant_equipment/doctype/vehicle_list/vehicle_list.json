@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2023-05-09 16:04:53.304851",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "division",
+  "registered_list_of_vehicles_in_mgcsb"
+ ],
+ "fields": [
+  {
+   "fieldname": "registered_list_of_vehicles_in_mgcsb",
+   "fieldtype": "Table",
+   "label": " REGISTERED LIST OF VEHICLES IN MGCSB",
+   "options": "Vehicle List Table"
+  },
+  {
+   "fieldname": "division",
+   "fieldtype": "Link",
+   "label": "Division",
+   "options": "Contract"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-19 21:05:09.968655",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Vehicle List",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

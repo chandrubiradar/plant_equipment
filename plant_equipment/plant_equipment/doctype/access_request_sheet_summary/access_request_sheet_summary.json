@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-09 14:30:22.064625",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "client",
+  "contract_no",
+  "column_break_3",
+  "date",
+  "title",
+  "mashhor_scaffolding_division_section",
+  "table_6",
+  "section_break_7",
+  "total_volume",
+  "total_platforms",
+  "column_break_10",
+  "total_area",
+  "total_tags",
+  "section_break_11",
+  "name1",
+  "column_break_15",
+  "signature",
+  "column_break_16",
+  "date2"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Data",
+   "label": "Client"
+  },
+  {
+   "fieldname": "contract_no",
+   "fieldtype": "Data",
+   "label": "Contract No"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "mashhor_scaffolding_division_section",
+   "fieldtype": "Section Break",
+   "label": "MASHHOR SCAFFOLDING DIVISION"
+  },
+  {
+   "fieldname": "table_6",
+   "fieldtype": "Table",
+   "options": "ARS Scaffolding Summary Table"
+  },
+  {
+   "fieldname": "total_volume",
+   "fieldtype": "Data",
+   "label": "Total Volume"
+  },
+  {
+   "fieldname": "total_platforms",
+   "fieldtype": "Data",
+   "label": "Total Platforms"
+  },
+  {
+   "fieldname": "total_area",
+   "fieldtype": "Data",
+   "label": "Total Area"
+  },
+  {
+   "fieldname": "total_tags",
+   "fieldtype": "Data",
+   "label": "Total Tags"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Prepared By Scaff: Sup/Advance Scaffolder"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "date2",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Attach",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-09 19:03:04.029966",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Access Request Sheet Summary",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

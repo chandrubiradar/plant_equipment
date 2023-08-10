@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-09 20:59:29.182199",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "scrap_size",
+  "qty",
+  "48m_16_ft",
+  "39m_13_ft",
+  "30m_10_ft",
+  "24m_8_ft",
+  "18m_6_ft",
+  "15m_5_ft",
+  "12m_4_ft",
+  "03m_1_ft"
+ ],
+ "fields": [
+  {
+   "fieldname": "scrap_size",
+   "fieldtype": "Data",
+   "label": "Scrap Size"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Data",
+   "label": "QTY"
+  },
+  {
+   "fieldname": "39m_13_ft",
+   "fieldtype": "Data",
+   "label": "3.9m (13 Ft)"
+  },
+  {
+   "fieldname": "30m_10_ft",
+   "fieldtype": "Data",
+   "label": "3.0m (10 Ft)"
+  },
+  {
+   "fieldname": "24m_8_ft",
+   "fieldtype": "Data",
+   "label": "2.4m (8 Ft)"
+  },
+  {
+   "fieldname": "18m_6_ft",
+   "fieldtype": "Data",
+   "label": "1.8m (6 Ft)"
+  },
+  {
+   "fieldname": "15m_5_ft",
+   "fieldtype": "Data",
+   "label": "1.5m (5 Ft)"
+  },
+  {
+   "fieldname": "12m_4_ft",
+   "fieldtype": "Data",
+   "label": "1.2m (4 Ft)"
+  },
+  {
+   "fieldname": "03m_1_ft",
+   "fieldtype": "Data",
+   "label": "0.3m (1 Ft)"
+  },
+  {
+   "fieldname": "48m_16_ft",
+   "fieldtype": "Data",
+   "label": "Size Cutted: 4.8m (16Ft)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-05-09 21:02:05.723659",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Scrap Material Tube Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

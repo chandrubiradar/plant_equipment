@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-09 16:03:35.777300",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "division",
+  "name1",
+  "position",
+  "vehicle_type",
+  "vehicle_no",
+  "contact_no",
+  "stl_compliance_expiry",
+  "service_done",
+  "next_service_due",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "label": "Position"
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Data",
+   "label": "Vehicle Type"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Data",
+   "label": "Vehicle No."
+  },
+  {
+   "fieldname": "contact_no",
+   "fieldtype": "Data",
+   "label": "Contact No."
+  },
+  {
+   "fieldname": "stl_compliance_expiry",
+   "fieldtype": "Data",
+   "label": "STL Compliance Expiry"
+  },
+  {
+   "fieldname": "service_done",
+   "fieldtype": "Data",
+   "label": "Service Done"
+  },
+  {
+   "fieldname": "next_service_due",
+   "fieldtype": "Data",
+   "label": "Next Service Due"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "division",
+   "fieldtype": "Data",
+   "label": "Division"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-05-10 18:13:27.719765",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Vehicle List Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

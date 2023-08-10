@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2023-01-11 16:16:24.890406",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "asset_no",
+  "department",
+  "brand",
+  "serialreg_no",
+  "tpi",
+  "date_inspected",
+  "certificated_no",
+  "date_inspected_",
+  "mpi_report",
+  "column_break_10",
+  "contract",
+  "description",
+  "qty",
+  "model",
+  "request_for_contract",
+  "calibration",
+  "expiry_date",
+  "stl",
+  "expiry_date_",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "asset_no",
+   "fieldtype": "Data",
+   "label": "Asset No"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Data",
+   "label": "Brand"
+  },
+  {
+   "fieldname": "serialreg_no",
+   "fieldtype": "Data",
+   "label": "Serial/Reg No"
+  },
+  {
+   "fieldname": "tpi",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "TPI",
+   "options": "\nY\nN"
+  },
+  {
+   "fieldname": "date_inspected",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Date Inspected"
+  },
+  {
+   "fieldname": "certificated_no",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Certificated No"
+  },
+  {
+   "fieldname": "date_inspected_",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Date Inspected_"
+  },
+  {
+   "fieldname": "mpi_report",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "MPI Report"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Contract"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Data",
+   "label": "Qty"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "default": "0",
+   "fieldname": "request_for_contract",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Required for Contract"
+  },
+  {
+   "fieldname": "calibration",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Calibration",
+   "options": "\nY\nN"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "stl",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "STL",
+   "options": "\nY\nN"
+  },
+  {
+   "fieldname": "expiry_date_",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Expiry Date_"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Tools",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-26 18:38:55.429646",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Tools",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

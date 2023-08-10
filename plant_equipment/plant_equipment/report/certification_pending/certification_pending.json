@@ -1,0 +1,27 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2023-07-17 14:23:57.925175",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2023-07-17 20:49:17.433675",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Certification Pending",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "LCMS Tools Inspection and Certificate",
+ "report_name": "Certification Pending",
+ "report_script": "columns=[\r\n     \r\n     {\r\n\t\t\"fieldname\": \"asset_no\",\r\n\t\t\"label\": _(\"Asset No\"),\r\n\t\t\"fieldtype\": \"Data\",\r\n\t\t\"width\": 300\r\n\t },\r\n\t {\r\n\t\t\"fieldname\": \"cert_no\",\r\n\t\t\"label\": _(\"Certificate No.\"),\r\n\t\t\"fieldtype\": \"Data\",\r\n\t\t\"width\": 300\r\n\t },\r\n\t {\r\n\t\t\"fieldname\": \"TPI\",\r\n\t\t\"label\": _(\"tpi\"),\r\n\t\t\"fieldtype\": \"Select\",\r\n\t\t\"width\": 100\r\n\t },\r\n\t  {\r\n\t\t\"fieldname\": \"TPI Expiry\",\r\n\t\t\"label\": _(\"tpi_expiry\"),\r\n\t\t\"fieldtype\": \"Date\",\r\n\t\t\"width\": 100\r\n\t },\r\n\t {\r\n\t\t\"fieldname\": \"calibration\",\r\n\t\t\"label\": _(\"CALIBRATION\"),\r\n\t\t\"fieldtype\": \"Select\",\r\n\t\t\"width\": 100\r\n\t },\r\n\t  {\r\n\t\t\"fieldname\": \"expiry_date\",\r\n\t\t\"label\": _(\"CALIBRATION Expiry\"),\r\n\t\t\"fieldtype\": \"Date\",\r\n\t\t\"width\": 100\r\n\t },\r\n\t  {\r\n\t\t\"fieldname\": \"mpi_report\",\r\n\t\t\"label\": _(\"MPI Report\"),\r\n\t\t\"fieldtype\": \"Select\",\r\n\t\t\"width\": 100\r\n\t },\r\n\t {\r\n\t\t\"fieldname\": \"expiry_date1\",\r\n\t\t\"label\": _(\"MPI Report Expiry\"),\r\n\t\t\"fieldtype\": \"Date\",\r\n\t\t\"width\": 100\r\n\t }\r\n]\r\n\r\nresult = frappe.db.get_list('LCMS Tools Inspection and Certificate',['asset_no','cert_no','tpi','calibration','mpi_report','tpi_expiry','expiry_date','expiry_date1'])\r\n\r\ndata = [columns,result]",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

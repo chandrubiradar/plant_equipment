@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-01-12 14:19:27.837545",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "consignment",
+  "status",
+  "security_for_inspection_and_clearance",
+  "column_break_4",
+  "send_to_destination__worksite",
+  "acknowledge_and_received_by_site_authorized_person",
+  "retain_the_pink_and_green_copies_only"
+ ],
+ "fields": [
+  {
+   "fieldname": "consignment",
+   "fieldtype": "Link",
+   "label": "Consignment",
+   "options": "Consignment Note"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nApproved\nRejected"
+  },
+  {
+   "fieldname": "security_for_inspection_and_clearance",
+   "fieldtype": "Data",
+   "label": "Security for Inspection and Clearance"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "send_to_destination__worksite",
+   "fieldtype": "Data",
+   "label": "Send to Destination / Worksite"
+  },
+  {
+   "fieldname": "acknowledge_and_received_by_site_authorized_person",
+   "fieldtype": "Data",
+   "label": "Acknowledge and received by site authorized person"
+  },
+  {
+   "fieldname": "retain_the_pink_and_green_copies_only",
+   "fieldtype": "Data",
+   "label": "Retain the pink and green copies only"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-12 14:19:27.837545",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Plant Asset Movement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

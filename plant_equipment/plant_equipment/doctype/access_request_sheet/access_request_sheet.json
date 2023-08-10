@@ -1,0 +1,728 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{location}-{won}-{ars_no}",
+ "creation": "2023-05-09 17:38:34.505305",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "location",
+  "contract",
+  "column_break_3",
+  "ars_no",
+  "won",
+  "section_break_6",
+  "type",
+  "status",
+  "column_break_9",
+  "description",
+  "section_break_26",
+  "name1",
+  "signclient_authority",
+  "column_break_30",
+  "indicator",
+  "date2",
+  "dismantling_section",
+  "dstart_date",
+  "tentative_dismantling",
+  "column_break_15",
+  "actual_end_date",
+  "measure_of_access_column",
+  "height",
+  "length",
+  "width",
+  "materials",
+  "note",
+  "column_break_16",
+  "no_of_platform",
+  "total_volume",
+  "total_area",
+  "material_transfer_status",
+  "erection_period_section",
+  "erection_start_date",
+  "column_break_34",
+  "erection_completed_date",
+  "section_break_21",
+  "scafftag_no",
+  "start_date",
+  "inspection",
+  "planned_days_count",
+  "column_break_23",
+  "tentative_end_date",
+  "actual_hire_end",
+  "actual_days_count",
+  "supervisor_approval_section",
+  "supervisor_name",
+  "column_break_36",
+  "supervisor_date",
+  "inspector_approval_section",
+  "inspector_name",
+  "inspection_date",
+  "column_break_29",
+  "inspection_status",
+  "remarks",
+  "section_break_18",
+  "requestor_column",
+  "requestor_name",
+  "request_date",
+  "attachment",
+  "acceptable_column",
+  "acceptor_name",
+  "acceptor_date",
+  "names",
+  "attachment2",
+  "table_19",
+  "scaffolding_type_section",
+  "towerimg",
+  "tower",
+  "image_33",
+  "independentimg",
+  "independent",
+  "image_35",
+  "mobiletowerimg",
+  "mobile_tower",
+  "image_37",
+  "column_break_35",
+  "aframeimg",
+  "a_frame",
+  "image_40",
+  "iwbimg",
+  "independent_with_bridge",
+  "image_42",
+  "birdcageimg",
+  "bird_cage",
+  "image_44",
+  "column_break_39",
+  "trustoutimg",
+  "trust_out",
+  "image_47",
+  "hangerimg",
+  "hanger",
+  "image_49",
+  "cantileverimg",
+  "cantilever",
+  "image_51",
+  "section_break_52",
+  "commentsremarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Location"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "won",
+   "fieldtype": "Link",
+   "label": "WON",
+   "options": "Project"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Details Of Access:"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Hiring Started' || doc.status == 'Hiring Completed' || doc.status == 'Dismantle Started' || doc.status == 'Dismantle Completed'",
+   "fieldname": "scafftag_no",
+   "fieldtype": "Data",
+   "label": "ScaffTag No:",
+   "mandatory_depends_on": "eval:doc.status == 'Hiring Started' || doc.status == 'Hiring Completed' || doc.status == 'Dismantle Started' || doc.status == 'Dismantle Completed'"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type:",
+   "options": "\nTower\nA-Frame\nTrust Out\nIndependent\nIndependent With Bridge\nHanger\nMobile Tower\nBridge Cage\nCantilever",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description:"
+  },
+  {
+   "depends_on": "eval:doc.workflow_state != 'Draft'",
+   "fieldname": "measure_of_access_column",
+   "fieldtype": "Section Break",
+   "label": "Measure Of Access:"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height(M):",
+   "mandatory_depends_on": "eval:doc.workflow_state != 'Draft'"
+  },
+  {
+   "fieldname": "length",
+   "fieldtype": "Data",
+   "label": "Length(M):",
+   "mandatory_depends_on": "eval:doc.workflow_state != 'Draft'"
+  },
+  {
+   "fieldname": "width",
+   "fieldtype": "Data",
+   "label": "Width(M):",
+   "mandatory_depends_on": "eval:doc.workflow_state != 'Draft'"
+  },
+  {
+   "fieldname": "no_of_platform",
+   "fieldtype": "Data",
+   "label": "No. Of Platform:",
+   "mandatory_depends_on": "eval:doc.workflow_state != 'Draft'"
+  },
+  {
+   "fieldname": "total_volume",
+   "fieldtype": "Data",
+   "label": "Total Volume(M3):",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_area",
+   "fieldtype": "Data",
+   "label": "Total Area(M2):",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break",
+   "label": "Client Authority"
+  },
+  {
+   "fieldname": "table_19",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "options": "ARS Sign Table"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Hiring Started' || doc.status == 'Hiring Completed' || doc.status == 'Dismantle Started' || doc.status == 'Dismantle Completed'",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Hire Start Date",
+   "mandatory_depends_on": "eval:doc.status == 'Hiring Started' || doc.status == 'Hiring Completed' || doc.status == 'Dismantle Started' || doc.status == 'Dismantle Completed'"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Hiring Started' || doc.status == 'Hiring Completed' || doc.status == 'Dismantle Started' || doc.status == 'Dismantle Completed'",
+   "fieldname": "tentative_end_date",
+   "fieldtype": "Date",
+   "label": "Tentative End Date"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "mandatory_depends_on": "eval:doc.status == 'Dismantle Started' || doc.status == 'Dismantle Completed'"
+  },
+  {
+   "fieldname": "signclient_authority",
+   "fieldtype": "Attach",
+   "label": "Attachment(Client Authority)",
+   "mandatory_depends_on": "//eval:doc.status == 'Completed' && doc.workflow_state == 'Approved by SC' || doc.workflow_state == 'Dismantling' || doc.workflow_state == 'Completed'"
+  },
+  {
+   "fieldname": "indicator",
+   "fieldtype": "Data",
+   "label": "Indicator"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date2",
+   "fieldtype": "Date",
+   "label": "Date",
+   "mandatory_depends_on": "//eval:doc.status == 'Completed' && doc.workflow_state == 'Approved by SC' || doc.workflow_state == 'Dismantling' || doc.workflow_state == 'Completed'"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break",
+   "label": "Hire Period:"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Dismantle Started' || doc.status == 'Dismantle Completed'",
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break",
+   "label": "Authorized Signatory(Actual Dismantling):"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scaffolding_type_section",
+   "fieldtype": "Section Break",
+   "label": "Scaffolding Type"
+  },
+  {
+   "default": "0",
+   "fieldname": "tower",
+   "fieldtype": "Check",
+   "label": "Tower"
+  },
+  {
+   "default": "0",
+   "fieldname": "a_frame",
+   "fieldtype": "Check",
+   "label": "A-Frame"
+  },
+  {
+   "default": "0",
+   "fieldname": "independent",
+   "fieldtype": "Check",
+   "label": "Independent"
+  },
+  {
+   "default": "0",
+   "fieldname": "mobile_tower",
+   "fieldtype": "Check",
+   "label": "Mobile Tower"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "independent_with_bridge",
+   "fieldtype": "Check",
+   "label": "Independent With Bridge"
+  },
+  {
+   "default": "0",
+   "fieldname": "bird_cage",
+   "fieldtype": "Check",
+   "label": "Bird Cage"
+  },
+  {
+   "fieldname": "column_break_39",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "trust_out",
+   "fieldtype": "Check",
+   "label": "Trust Out"
+  },
+  {
+   "default": "0",
+   "fieldname": "hanger",
+   "fieldtype": "Check",
+   "label": "Hanger"
+  },
+  {
+   "default": "0",
+   "fieldname": "cantilever",
+   "fieldtype": "Check",
+   "label": "Cantilever"
+  },
+  {
+   "fieldname": "image_33",
+   "fieldtype": "Image",
+   "options": "towerimg"
+  },
+  {
+   "fieldname": "image_35",
+   "fieldtype": "Image",
+   "options": "independentimg"
+  },
+  {
+   "fieldname": "image_37",
+   "fieldtype": "Image",
+   "options": "mobiletowerimg"
+  },
+  {
+   "fieldname": "image_40",
+   "fieldtype": "Image",
+   "options": "aframeimg"
+  },
+  {
+   "fieldname": "image_42",
+   "fieldtype": "Image",
+   "options": "iwbimg"
+  },
+  {
+   "fieldname": "image_44",
+   "fieldtype": "Image",
+   "options": "birdcageimg"
+  },
+  {
+   "fieldname": "image_47",
+   "fieldtype": "Image",
+   "options": "trustoutimg"
+  },
+  {
+   "fieldname": "image_49",
+   "fieldtype": "Image",
+   "options": "hangerimg"
+  },
+  {
+   "fieldname": "image_51",
+   "fieldtype": "Image",
+   "options": "cantileverimg"
+  },
+  {
+   "fieldname": "section_break_52",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "commentsremarks",
+   "fieldtype": "Small Text",
+   "label": "Comments/Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Access Request Sheet",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "ars_no",
+   "fieldtype": "Data",
+   "label": "ARS No:"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.workflow_state != 'Draft' && doc.workflow_state != 'Pending Site Visit'&& doc.workflow_state != 'Site Visit Completed' && doc.workflow_state != 'Pending With SC' && doc.workflow_state != 'Pending Inspection'",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "mandatory_depends_on": "eval:doc.workflow_state == 'Approved by SC' || doc.workflow_state == 'Dismantling'",
+   "options": "Erection Started\nErection Completed\nHiring Started\nHiring Completed\nDismantle Started\nDismantle Completed"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "5274a312af",
+   "fieldname": "names",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "names",
+   "options": "Ars table template"
+  },
+  {
+   "fieldname": "towerimg",
+   "fieldtype": "Attach",
+   "label": "towerimg"
+  },
+  {
+   "fieldname": "requestor_column",
+   "fieldtype": "Column Break",
+   "label": "Requestor:"
+  },
+  {
+   "fieldname": "requestor_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.workflow_state == 'Pending With SC' || doc.workflow_state == 'Approved by SC' || doc.workflow_state == 'Dismantling' || doc.workflow_state == 'Completed' || doc.workflow_state == 'Cancelled'",
+   "fieldname": "acceptable_column",
+   "fieldtype": "Column Break",
+   "label": "Acceptable:"
+  },
+  {
+   "fieldname": "acceptor_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "mandatory_depends_on": "eval: doc.status == 'Dismantle Completed'"
+  },
+  {
+   "default": "Today",
+   "fieldname": "acceptor_date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "mandatory_depends_on": "eval:doc.status == 'Dismantle Completed'"
+  },
+  {
+   "depends_on": "eval:doc.workflow_state != 'Draft'",
+   "fieldname": "supervisor_approval_section",
+   "fieldtype": "Section Break",
+   "label": "Supervisor Approval"
+  },
+  {
+   "fieldname": "supervisor_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "mandatory_depends_on": "eval:doc.workflow_state != 'Draft'"
+  },
+  {
+   "default": "Today",
+   "fieldname": "supervisor_date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "mandatory_depends_on": "eval:doc.workflow_state != 'Draft'"
+  },
+  {
+   "fieldname": "column_break_36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.workflow_state == 'Pending Inspection' || doc.workflow_state == 'Pending With SC' || doc.workflow_state == 'Approved by SC' || doc.workflow_state == 'Dismantling' || doc.workflow_state == 'Completed'",
+   "fieldname": "inspector_approval_section",
+   "fieldtype": "Section Break",
+   "label": "Inspector Approval"
+  },
+  {
+   "fieldname": "inspector_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "mandatory_depends_on": "//eval:doc.workflow_state == 'Pending Inspection' || doc.workflow_state == 'Pending With SC' || doc.workflow_state == 'Approved by SC' || doc.workflow_state == 'Dismantling' || doc.workflow_state == 'Completed'"
+  },
+  {
+   "default": "Today",
+   "fieldname": "inspection_date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "mandatory_depends_on": "//eval:doc.workflow_state == 'Pending Inspection' || doc.workflow_state == 'Pending With SC' || doc.workflow_state == 'Approved by SC' || doc.workflow_state == 'Dismantling' || doc.workflow_state == 'Completed'"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inspection_status",
+   "fieldtype": "Select",
+   "label": "Inspection Status",
+   "mandatory_depends_on": "//eval:doc.workflow_state == 'Pending Inspection' || doc.workflow_state == 'Pending With SC' || doc.workflow_state == 'Approved by SC' || doc.workflow_state == 'Dismantling' || doc.workflow_state == 'Completed'",
+   "options": "\nPassed\nFailed"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Erection Completed' ||doc.status == 'Hiring Started' || doc.status == 'Hiring Completed' || doc.status == 'Dismantle Started' || doc.status == 'Dismantle Completed'",
+   "fieldname": "erection_completed_date",
+   "fieldtype": "Date",
+   "label": "Erection Completed Date",
+   "mandatory_depends_on": "eval:doc.status == 'Erection Completed' ||doc.status == 'Hiring Started' || doc.status == 'Hiring Completed' || doc.status == 'Dismantle Started' || doc.status == 'Dismantle Completed'"
+  },
+  {
+   "fieldname": "dstart_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "mandatory_depends_on": "eval:doc.status == 'Dismantle Started' || doc.status == 'Dismantle Completed'"
+  },
+  {
+   "fieldname": "tentative_dismantling",
+   "fieldtype": "Date",
+   "label": "Tentative End Date"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Dismantle Completed'",
+   "fieldname": "actual_end_date",
+   "fieldtype": "Date",
+   "label": "Actual End Date",
+   "mandatory_depends_on": "eval:doc.status == 'Dismantle Completed'"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Dismantle Started' || doc.status == 'Dismantle Completed'",
+   "fieldname": "dismantling_section",
+   "fieldtype": "Section Break",
+   "label": "Dismantling Period"
+  },
+  {
+   "fieldname": "independentimg",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "Independentimg"
+  },
+  {
+   "fieldname": "mobiletowerimg",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "Mobiletowerimg"
+  },
+  {
+   "fieldname": "aframeimg",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "aframeimg"
+  },
+  {
+   "fieldname": "iwbimg",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "iwbimg"
+  },
+  {
+   "fieldname": "birdcageimg",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "birdcageimg"
+  },
+  {
+   "fieldname": "trustoutimg",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "trustoutimg"
+  },
+  {
+   "fieldname": "hangerimg",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "hangerimg"
+  },
+  {
+   "fieldname": "cantileverimg",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "cantileverimg"
+  },
+  {
+   "depends_on": "eval:doc.workflow_state == 'Approved by SC' || doc.workflow_state == 'Dismantling' || doc.workflow_state == 'Completed'",
+   "fieldname": "inspection",
+   "fieldtype": "Link",
+   "label": "Inspection",
+   "options": "Scaffolding Inspection",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Contract"
+  },
+  {
+   "depends_on": "//eval:doc.inspection_status == \"Failed\"",
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks",
+   "mandatory_depends_on": "//eval:doc.inspection_status == \"Failed\""
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "attachment2",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "planned_days_count",
+   "fieldtype": "Data",
+   "label": "Planned Days Count",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.actual_hire_end",
+   "fieldname": "actual_days_count",
+   "fieldtype": "Data",
+   "label": "Actual Days Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "erection_period_section",
+   "fieldtype": "Section Break",
+   "label": "Erection Period"
+  },
+  {
+   "depends_on": "eval:doc.workflow_state == \"Approved by SC\" && doc.status == 'Erection Started' ||doc.status == 'Erection Completed' ||doc.status == 'Hiring Started' || doc.status == 'Hiring Completed' || doc.status == 'Dismantle Started' || doc.status == 'Dismantle Completed'",
+   "fieldname": "erection_start_date",
+   "fieldtype": "Date",
+   "label": "Erection Start Date",
+   "mandatory_depends_on": "eval:doc.workflow_state == \"Approved by SC\" && doc.status == 'Erection Started' ||doc.status == 'Erection Completed' ||doc.status == 'Hiring Started' || doc.status == 'Hiring Completed' || doc.status == 'Dismantle Started' || doc.status == 'Dismantle Completed'"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.status == 'Hiring Completed' || doc.status == 'Dismantle Started' || doc.status == 'Dismantle Completed'",
+   "fieldname": "actual_hire_end",
+   "fieldtype": "Date",
+   "label": "Actual End Date",
+   "mandatory_depends_on": "eval:doc.status == 'Hiring Completed' ||doc.status == 'Dismantle Started' || doc.status == 'Dismantle Completed'"
+  },
+  {
+   "depends_on": "eval:doc.total_volume || doc.total_area",
+   "fieldname": "materials",
+   "fieldtype": "Link",
+   "label": "Materials",
+   "mandatory_depends_on": "eval:doc.total_volume || doc.total_area",
+   "options": "Material Request"
+  },
+  {
+   "depends_on": "eval:doc.materials",
+   "fetch_from": "materials.status",
+   "fetch_if_empty": 1,
+   "fieldname": "material_transfer_status",
+   "fieldtype": "Data",
+   "label": "Material Transfer Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Transfer Detail",
+   "options": "Stock Entry",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Scaffolding Inspection",
+   "link_fieldname": "ars_no"
+  }
+ ],
+ "modified": "2023-08-04 15:07:22.642584",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Access Request Sheet",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

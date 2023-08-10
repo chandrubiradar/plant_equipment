@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-23 19:43:50.875241",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "names",
+  "tower",
+  "aframe",
+  "column_break_4",
+  "trustout",
+  "independent",
+  "inde_with_bridge",
+  "column_break_8",
+  "hanger",
+  "mobile_tower",
+  "birdcage",
+  "cantilever"
+ ],
+ "fields": [
+  {
+   "fieldname": "names",
+   "fieldtype": "Data",
+   "label": "Names"
+  },
+  {
+   "fieldname": "tower",
+   "fieldtype": "Attach",
+   "label": "tower"
+  },
+  {
+   "fieldname": "aframe",
+   "fieldtype": "Attach",
+   "label": "aframe"
+  },
+  {
+   "fieldname": "trustout",
+   "fieldtype": "Attach",
+   "label": "trustout"
+  },
+  {
+   "fieldname": "independent",
+   "fieldtype": "Attach",
+   "label": "independent"
+  },
+  {
+   "fieldname": "inde_with_bridge",
+   "fieldtype": "Attach",
+   "label": "inde with bridge"
+  },
+  {
+   "fieldname": "hanger",
+   "fieldtype": "Attach",
+   "label": "hanger"
+  },
+  {
+   "fieldname": "mobile_tower",
+   "fieldtype": "Attach",
+   "label": "mobile tower"
+  },
+  {
+   "fieldname": "birdcage",
+   "fieldtype": "Attach",
+   "label": "birdcage"
+  },
+  {
+   "fieldname": "cantilever",
+   "fieldtype": "Attach",
+   "label": "cantilever"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-23 21:26:07.968981",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Images",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

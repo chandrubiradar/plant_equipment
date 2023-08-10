@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-01-11 21:55:44.093525",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "detail_movement",
+  "to",
+  "from",
+  "drivers_name",
+  "signature",
+  "column_break_6",
+  "please_tick_below_mentioned",
+  "out_going",
+  "time_out",
+  "in_coming",
+  "time_in"
+ ],
+ "fields": [
+  {
+   "fieldname": "detail_movement",
+   "fieldtype": "Heading",
+   "label": "DETAIL MOVEMENT"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Data",
+   "label": "To"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Data",
+   "label": "From"
+  },
+  {
+   "fieldname": "drivers_name",
+   "fieldtype": "Data",
+   "label": "Driver's Name"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "please_tick_below_mentioned",
+   "fieldtype": "Heading",
+   "label": "Please tick below mentioned"
+  },
+  {
+   "default": "0",
+   "fieldname": "out_going",
+   "fieldtype": "Check",
+   "label": "OUT GOING"
+  },
+  {
+   "fieldname": "time_out",
+   "fieldtype": "Time",
+   "label": "Time Out"
+  },
+  {
+   "default": "0",
+   "fieldname": "in_coming",
+   "fieldtype": "Check",
+   "label": "IN COMING"
+  },
+  {
+   "fieldname": "time_in",
+   "fieldtype": "Time",
+   "label": "Time In"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-11 21:55:44.093525",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Consignment Note",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

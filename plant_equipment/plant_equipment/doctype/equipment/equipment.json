@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:asset_no",
+ "creation": "2023-01-11 19:03:53.613550",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "year",
+  "date",
+  "mileage",
+  "division",
+  "running_hours",
+  "description",
+  "model",
+  "column_break_7",
+  "contract",
+  "items",
+  "asset_no",
+  "service_detail",
+  "vehicle_no",
+  "service_due",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "year",
+   "fieldtype": "Data",
+   "label": "Year"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "mileage",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Mileage"
+  },
+  {
+   "fieldname": "division",
+   "fieldtype": "Link",
+   "label": "Division",
+   "options": "Contract Master"
+  },
+  {
+   "fieldname": "running_hours",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Running Hours"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "hidden": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Data",
+   "label": "Items"
+  },
+  {
+   "fieldname": "asset_no",
+   "fieldtype": "Data",
+   "label": "Asset No",
+   "unique": 1
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Vehicle No"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "service_due",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Service Due"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "hidden": 1,
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "service_detail",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Service Detail",
+   "options": "Equipment Services"
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Contract"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-19 21:31:14.616928",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Equipment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

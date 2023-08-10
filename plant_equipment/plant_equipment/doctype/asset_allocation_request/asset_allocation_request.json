@@ -1,0 +1,223 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: Asset Allocation-{##}",
+ "creation": "2023-06-27 18:04:07.686967",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "asset",
+  "asset_name",
+  "type_of_asset",
+  "from_date",
+  "day_count",
+  "date",
+  "check_availability",
+  "column_break_4",
+  "contract",
+  "registration_number",
+  "to_date",
+  "requestor",
+  "requestor_name",
+  "allocation_details_section",
+  "availability",
+  "employee_name",
+  "column_break_12",
+  "allocated_dates",
+  "allocation_for",
+  "name1",
+  "campaign",
+  "won",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Asset",
+   "options": "Asset",
+   "read_only_depends_on": "eval:doc.workflow_state == 'Request Declined'",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "asset.asset_name",
+   "fieldname": "asset_name",
+   "fieldtype": "Data",
+   "label": "Asset Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "type_of_asset",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Type of Asset",
+   "read_only_depends_on": "eval:doc.workflow_state == 'Request Declined'"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From",
+   "read_only_depends_on": "eval:doc.workflow_state == 'Request Declined'",
+   "reqd": 1
+  },
+  {
+   "fieldname": "day_count",
+   "fieldtype": "Data",
+   "label": "Day Count",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "read_only": 1,
+   "read_only_depends_on": "eval:doc.workflow_state == 'Request Declined'"
+  },
+  {
+   "depends_on": "eval:doc.workflow_state != \"Request Pending\" && doc.workflow_state != \"Asset Allocated\" && doc.workflow_state != \"Request Declined\"",
+   "fieldname": "check_availability",
+   "fieldtype": "Button",
+   "label": "Check Availability"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Contract",
+   "read_only_depends_on": "eval:doc.workflow_state == 'Request Declined'",
+   "reqd": 1
+  },
+  {
+   "fieldname": "registration_number",
+   "fieldtype": "Data",
+   "label": "Registration Number",
+   "read_only_depends_on": "eval:doc.workflow_state == 'Request Declined'"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To",
+   "read_only_depends_on": "eval:doc.workflow_state == 'Request Declined'",
+   "reqd": 1
+  },
+  {
+   "fieldname": "requestor",
+   "fieldtype": "Link",
+   "label": "Requestor",
+   "options": "Employee",
+   "read_only_depends_on": "eval:doc.workflow_state == 'Request Declined'",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "requestor.employee_name",
+   "fieldname": "requestor_name",
+   "fieldtype": "Data",
+   "label": "Requestor Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "allocation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Allocation Details"
+  },
+  {
+   "fieldname": "availability",
+   "fieldtype": "Select",
+   "label": "Availability",
+   "options": "\nUnavailable\nAvailable",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "name1.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.availability == \"Unavailable\"",
+   "fieldname": "allocated_dates",
+   "fieldtype": "Table",
+   "label": "Allocated Dates",
+   "options": "Allocation Report",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.availability == \"Available\"",
+   "fieldname": "allocation_for",
+   "fieldtype": "Select",
+   "label": "Allocation For",
+   "options": "\nIndividual\nProject Work"
+  },
+  {
+   "depends_on": "eval:doc.allocation_for && doc.availability == \"Available\"",
+   "fieldname": "name1",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "read_only_depends_on": "eval:doc.workflow_state == 'Request Declined'"
+  },
+  {
+   "depends_on": "eval:doc.allocation_for == \"Project Work\" && doc.availability == \"Available\"",
+   "fieldname": "campaign",
+   "fieldtype": "Link",
+   "label": "Campaign",
+   "options": "Mashhor Campaign",
+   "read_only_depends_on": "eval:doc.workflow_state == 'Request Declined'"
+  },
+  {
+   "depends_on": "eval:doc.allocation_for == \"Project Work\" && doc.availability == \"Available\"",
+   "fieldname": "won",
+   "fieldtype": "Link",
+   "label": "WON",
+   "options": "Project",
+   "read_only_depends_on": "eval:doc.workflow_state == 'Request Declined'"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Asset Allocation Request",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-05 18:42:12.162464",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Asset Allocation Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

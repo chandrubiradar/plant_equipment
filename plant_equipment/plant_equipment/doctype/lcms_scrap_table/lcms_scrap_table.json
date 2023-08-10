@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-09 19:00:59.061604",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "descriptionitem_and_dimension",
+  "previous_stock",
+  "data_3",
+  "data_4",
+  "data_5",
+  "data_6",
+  "data_7",
+  "stock_ending"
+ ],
+ "fields": [
+  {
+   "fieldname": "descriptionitem_and_dimension",
+   "fieldtype": "Data",
+   "label": "Description(Dimension)"
+  },
+  {
+   "fieldname": "previous_stock",
+   "fieldtype": "Data",
+   "label": "Previous Stock"
+  },
+  {
+   "fieldname": "data_3",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "data_4",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "data_5",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "data_6",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "data_7",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "stock_ending",
+   "fieldtype": "Data",
+   "label": "Stock Ending"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Data",
+   "label": "Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-05-10 18:17:37.367864",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "LCMS Scrap Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

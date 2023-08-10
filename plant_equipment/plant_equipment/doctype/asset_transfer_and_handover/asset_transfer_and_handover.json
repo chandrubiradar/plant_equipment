@@ -1,0 +1,459 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-08 15:33:23.472693",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "type_of_asset",
+  "model",
+  "registration_no",
+  "column_break_4",
+  "please_tick_below",
+  "permanent_transfer",
+  "temporarily_transfer",
+  "please_state_the_duration_period",
+  "project_duration",
+  "please_state_the_duration_period1",
+  "asset_details_section",
+  "year_build",
+  "date_purchased",
+  "po_ref_number",
+  "column_break_15",
+  "value_column",
+  "current_value",
+  "your_ref_no",
+  "section_break_18",
+  "condition_please_tick_where_necessary",
+  "excellent",
+  "very_good",
+  "good",
+  "average",
+  "poor",
+  "needs_repair",
+  "propose_to_dispose",
+  "column_break_28",
+  "please_specify_the_condition_details",
+  "list_out_etc_originally_provided_along_with_asset",
+  "section_break_31",
+  "reason_for_handover",
+  "text_33",
+  "column_break_34",
+  "approval_by_director",
+  "data_36",
+  "data_41",
+  "business_dev_director",
+  "data_42",
+  "operations_director",
+  "data_43",
+  "fin__admin_director",
+  "data_44",
+  "take_over_and_hand_over_column_section",
+  "data_45",
+  "date_handover",
+  "name2",
+  "position",
+  "divisiondept",
+  "signature",
+  "column_break_51",
+  "taken_over_by",
+  "date_handover1",
+  "name1",
+  "position1",
+  "divisiondept1",
+  "signature1",
+  "asset_management_dept_column_section",
+  "update_record",
+  "inspection_and_check",
+  "re_new_code_no",
+  "send_for_repair",
+  "column_break_63",
+  "ref_code_no",
+  "date_entry",
+  "date_dispose",
+  "column_break_67",
+  "verified_and_endrosed_by_asset_manager",
+  "signature_69"
+ ],
+ "fields": [
+  {
+   "fieldname": "type_of_asset",
+   "fieldtype": "Data",
+   "label": "Type Of Asset"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "registration_no",
+   "fieldtype": "Data",
+   "label": "Registration No"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "please_tick_below",
+   "fieldtype": "Heading",
+   "label": "Please Tick below"
+  },
+  {
+   "default": "0",
+   "fieldname": "permanent_transfer",
+   "fieldtype": "Check",
+   "label": "PERMANENT TRANSFER"
+  },
+  {
+   "default": "0",
+   "fieldname": "temporarily_transfer",
+   "fieldtype": "Check",
+   "label": "TEMPORARILY TRANSFER"
+  },
+  {
+   "fieldname": "please_state_the_duration_period",
+   "fieldtype": "Data",
+   "label": "Please state the duration period"
+  },
+  {
+   "default": "0",
+   "fieldname": "project_duration",
+   "fieldtype": "Check",
+   "label": "PROJECT DURATION"
+  },
+  {
+   "fieldname": "please_state_the_duration_period1",
+   "fieldtype": "Data",
+   "label": "Please state the duration period"
+  },
+  {
+   "fieldname": "asset_details_section",
+   "fieldtype": "Section Break",
+   "label": "ASSET DETAILS"
+  },
+  {
+   "fieldname": "year_build",
+   "fieldtype": "Data",
+   "label": "Year Build"
+  },
+  {
+   "fieldname": "date_purchased",
+   "fieldtype": "Date",
+   "label": "Date Purchased"
+  },
+  {
+   "fieldname": "po_ref_number",
+   "fieldtype": "Data",
+   "label": "PO Ref. Number"
+  },
+  {
+   "fieldname": "value_column",
+   "fieldtype": "Data",
+   "label": "Value"
+  },
+  {
+   "fieldname": "current_value",
+   "fieldtype": "Data",
+   "label": "Current Value"
+  },
+  {
+   "fieldname": "your_ref_no",
+   "fieldtype": "Data",
+   "label": "Your Ref No"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "condition_please_tick_where_necessary",
+   "fieldtype": "Heading",
+   "label": "CONDITION (Please tick where necessary)"
+  },
+  {
+   "default": "0",
+   "fieldname": "excellent",
+   "fieldtype": "Check",
+   "label": "Excellent"
+  },
+  {
+   "default": "0",
+   "fieldname": "very_good",
+   "fieldtype": "Check",
+   "label": "Very Good"
+  },
+  {
+   "default": "0",
+   "fieldname": "good",
+   "fieldtype": "Check",
+   "label": "Good"
+  },
+  {
+   "default": "0",
+   "fieldname": "average",
+   "fieldtype": "Check",
+   "label": "Average"
+  },
+  {
+   "default": "0",
+   "fieldname": "poor",
+   "fieldtype": "Check",
+   "label": "Poor"
+  },
+  {
+   "default": "0",
+   "fieldname": "needs_repair",
+   "fieldtype": "Check",
+   "label": "Needs Repair"
+  },
+  {
+   "default": "0",
+   "fieldname": "propose_to_dispose",
+   "fieldtype": "Check",
+   "label": "Propose to Dispose"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "please_specify_the_condition_details",
+   "fieldtype": "Text",
+   "label": "Please specify the condition details"
+  },
+  {
+   "fieldname": "list_out_etc_originally_provided_along_with_asset",
+   "fieldtype": "Text",
+   "label": "List out any spare parts, accessories,blue-card,road tax, safety kit etc originally provided along with Asset"
+  },
+  {
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reason_for_handover",
+   "fieldtype": "Heading",
+   "label": "REASON FOR HANDOVER"
+  },
+  {
+   "fieldname": "text_33",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approval_by_director",
+   "fieldtype": "Heading",
+   "label": "APPROVAL BY (DIRECTOR) (Please tick for approval)"
+  },
+  {
+   "default": "0",
+   "fieldname": "data_36",
+   "fieldtype": "Check",
+   "label": "Chairman"
+  },
+  {
+   "default": "0",
+   "fieldname": "business_dev_director",
+   "fieldtype": "Check",
+   "label": "Business Dev Director"
+  },
+  {
+   "default": "0",
+   "fieldname": "operations_director",
+   "fieldtype": "Check",
+   "label": "Operations Director"
+  },
+  {
+   "default": "0",
+   "fieldname": "fin__admin_director",
+   "fieldtype": "Check",
+   "label": "Fin / Admin Director"
+  },
+  {
+   "fieldname": "data_41",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "data_42",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "data_43",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "data_44",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "take_over_and_hand_over_column_section",
+   "fieldtype": "Section Break",
+   "label": "TAKE-OVER & HAND-OVER COLUMN"
+  },
+  {
+   "fieldname": "data_45",
+   "fieldtype": "Heading",
+   "label": "Handed Over by"
+  },
+  {
+   "fieldname": "date_handover",
+   "fieldtype": "Date",
+   "label": "Date Handover"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "label": "Position"
+  },
+  {
+   "fieldname": "divisiondept",
+   "fieldtype": "Data",
+   "label": "Division/Dept"
+  },
+  {
+   "fieldname": "name2",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_51",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "taken_over_by",
+   "fieldtype": "Heading",
+   "label": "Taken Over by"
+  },
+  {
+   "fieldname": "date_handover1",
+   "fieldtype": "Date",
+   "label": "Date Handover"
+  },
+  {
+   "fieldname": "position1",
+   "fieldtype": "Data",
+   "label": "Position"
+  },
+  {
+   "fieldname": "divisiondept1",
+   "fieldtype": "Data",
+   "label": "Division/Dept"
+  },
+  {
+   "fieldname": "signature1",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "asset_management_dept_column_section",
+   "fieldtype": "Section Break",
+   "label": "ASSET MANAGEMENT DEPT COLUMN"
+  },
+  {
+   "default": "0",
+   "fieldname": "update_record",
+   "fieldtype": "Check",
+   "label": "Update Record"
+  },
+  {
+   "default": "0",
+   "fieldname": "inspection_and_check",
+   "fieldtype": "Check",
+   "label": "Inspection & Check"
+  },
+  {
+   "default": "0",
+   "fieldname": "re_new_code_no",
+   "fieldtype": "Check",
+   "label": "Re-new Code no"
+  },
+  {
+   "default": "0",
+   "fieldname": "send_for_repair",
+   "fieldtype": "Check",
+   "label": "Send for repair"
+  },
+  {
+   "fieldname": "column_break_63",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ref_code_no",
+   "fieldtype": "Data",
+   "label": "Ref Code No"
+  },
+  {
+   "fieldname": "date_entry",
+   "fieldtype": "Date",
+   "label": "Date Entry"
+  },
+  {
+   "fieldname": "date_dispose",
+   "fieldtype": "Date",
+   "label": "Date Dispose"
+  },
+  {
+   "fieldname": "column_break_67",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "verified_and_endrosed_by_asset_manager",
+   "fieldtype": "Heading",
+   "label": "Verified & Endrosed by Asset Manager"
+  },
+  {
+   "fieldname": "signature_69",
+   "fieldtype": "Signature"
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Contract"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-25 15:20:02.739496",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Asset Transfer and Handover",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

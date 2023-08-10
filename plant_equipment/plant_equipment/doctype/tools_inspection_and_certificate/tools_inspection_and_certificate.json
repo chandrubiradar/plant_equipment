@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-12 17:03:01.022523",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "lcms_tools",
+  "tpi",
+  "calibration",
+  "stl",
+  "date_inspected",
+  "expiry_date",
+  "column_break_6",
+  "asset_no",
+  "cert_no",
+  "date_inspected1",
+  "expiry_date1",
+  "mpi_report"
+ ],
+ "fields": [
+  {
+   "fieldname": "tpi",
+   "fieldtype": "Select",
+   "label": "TPI",
+   "options": "\nY\nN"
+  },
+  {
+   "fieldname": "calibration",
+   "fieldtype": "Select",
+   "label": "CALIBRATION",
+   "options": "\nY\nN"
+  },
+  {
+   "fieldname": "stl",
+   "fieldtype": "Select",
+   "label": "STL",
+   "options": "\nY\nN"
+  },
+  {
+   "fieldname": "date_inspected",
+   "fieldtype": "Date",
+   "label": "DATE INSPECTED"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Data",
+   "label": "EXPIRY DATE"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cert_no",
+   "fieldtype": "Data",
+   "label": "CERT NO"
+  },
+  {
+   "fieldname": "date_inspected1",
+   "fieldtype": "Date",
+   "label": "DATE INSPECTED"
+  },
+  {
+   "fieldname": "expiry_date1",
+   "fieldtype": "Date",
+   "label": "EXPIRY DATE"
+  },
+  {
+   "fieldname": "mpi_report",
+   "fieldtype": "Data",
+   "label": "MPI REPORT"
+  },
+  {
+   "fetch_from": "lcms_tools.asset_no",
+   "fieldname": "asset_no",
+   "fieldtype": "Data",
+   "label": "Asset No"
+  },
+  {
+   "fieldname": "lcms_tools",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Lcms Tools",
+   "options": "LCMS Tools"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-15 18:11:33.460269",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Tools Inspection and Certificate",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

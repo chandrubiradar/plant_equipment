@@ -1,0 +1,345 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Allocation Request-{##}",
+ "creation": "2023-07-20 23:33:18.189749",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "requestor",
+  "type_of_asset",
+  "easset_name",
+  "hvasset_name",
+  "lvasset_name",
+  "tasset_name",
+  "check_availability",
+  "column_break_4",
+  "date",
+  "requestor_name",
+  "equipment_asset",
+  "hvehicle_asset",
+  "lvehicle_asset",
+  "tool_asset",
+  "ecurrent_location",
+  "hvcurrent_location",
+  "lvcurrent_location",
+  "tcurrent_location",
+  "allocation_record_section",
+  "equipment_table",
+  "heavy_vehicle_table",
+  "light_vehicle_table",
+  "tools_table",
+  "allocation_details_section",
+  "from_date",
+  "availability",
+  "employee",
+  "campaign",
+  "column_break_31",
+  "to_date",
+  "day_count",
+  "employee_name",
+  "won",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "type_of_asset",
+   "fieldtype": "Select",
+   "label": "Type of Asset",
+   "options": "\nEquipment\nHeavy Vehicle\nTools\nLight Vehicle",
+   "read_only_depends_on": "eval:doc.workflow_state == 'Request Declined'"
+  },
+  {
+   "depends_on": "eval:doc.equipment_asset || doc.hvehicle_asset || doc.lvehicle_asset || doc.tool_asset",
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From",
+   "mandatory_depends_on": "eval:doc.equipment_asset || doc.hvehicle_asset || doc.lvehicle_asset || doc.tool_asset",
+   "read_only_depends_on": "//eval:doc.workflow_state == 'Request Declined'"
+  },
+  {
+   "depends_on": "eval:doc.type_of_asset",
+   "fieldname": "day_count",
+   "fieldtype": "Data",
+   "label": "Day Count",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "read_only": 1,
+   "read_only_depends_on": "//eval:doc.workflow_state == 'Request Declined'"
+  },
+  {
+   "depends_on": "eval:doc.workflow_state != \"Request Pending\" && doc.workflow_state != \"Asset Allocated\" && doc.workflow_state != \"Request Declined\"",
+   "fieldname": "check_availability",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Check Availability"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Contract",
+   "read_only_depends_on": "eval:doc.workflow_state == 'Request Declined'",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.equipment_asset || doc.hvehicle_asset || doc.lvehicle_asset || doc.tool_asset",
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To",
+   "mandatory_depends_on": "eval:doc.equipment_asset || doc.hvehicle_asset || doc.lvehicle_asset || doc.tool_asset",
+   "read_only_depends_on": "//eval:doc.workflow_state == 'Request Declined'"
+  },
+  {
+   "fieldname": "requestor",
+   "fieldtype": "Link",
+   "label": "Requestor",
+   "options": "Employee",
+   "read_only_depends_on": "eval:doc.workflow_state == 'Request Declined'",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "requestor.employee_name",
+   "fieldname": "requestor_name",
+   "fieldtype": "Data",
+   "label": "Requestor Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "allocation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Allocation Details"
+  },
+  {
+   "fieldname": "availability",
+   "fieldtype": "Select",
+   "label": "Availability",
+   "options": "\nUnavailable\nAvailable",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.availability == \"Available\"",
+   "fieldname": "campaign",
+   "fieldtype": "Link",
+   "label": "Campaign",
+   "options": "Mashhor Campaign",
+   "read_only_depends_on": "eval:doc.workflow_state == 'Request Declined'"
+  },
+  {
+   "depends_on": "eval:doc.availability == \"Available\"",
+   "fieldname": "won",
+   "fieldtype": "Link",
+   "label": "WON",
+   "options": "Project",
+   "read_only_depends_on": "eval:doc.workflow_state == 'Request Declined'"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Assets Allocation Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Assets Allocation Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type_of_asset == 'Equipment'",
+   "fetch_from": "equipment_asset.items",
+   "fieldname": "easset_name",
+   "fieldtype": "Data",
+   "label": "Asset Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type_of_asset == 'Equipment'",
+   "fieldname": "equipment_asset",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Asset",
+   "mandatory_depends_on": "eval:doc.type_of_asset == 'Equipment'",
+   "options": "Equipment",
+   "read_only_depends_on": "//eval:doc.workflow_state == 'Request Declined'"
+  },
+  {
+   "depends_on": "eval:doc.type_of_asset == 'Tools'",
+   "fetch_from": "tool_asset.description",
+   "fieldname": "tasset_name",
+   "fieldtype": "Data",
+   "label": "Asset Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type_of_asset == 'Tools'",
+   "fieldname": "tool_asset",
+   "fieldtype": "Link",
+   "label": "Asset",
+   "mandatory_depends_on": "eval:doc.type_of_asset == 'Tools'",
+   "options": "Tool PE"
+  },
+  {
+   "depends_on": "eval:doc.type_of_asset == 'Equipment'",
+   "fetch_from": "equipment_asset.current_location",
+   "fieldname": "ecurrent_location",
+   "fieldtype": "Data",
+   "label": "Current Location",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type_of_asset == 'Tools'",
+   "fetch_from": "tool_asset.current_location",
+   "fieldname": "tcurrent_location",
+   "fieldtype": "Data",
+   "label": "Current Location",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type_of_asset == 'Light Vehicle'",
+   "fieldname": "lvehicle_asset",
+   "fieldtype": "Link",
+   "label": "Asset",
+   "mandatory_depends_on": "eval:doc.type_of_asset == 'Light Vehicle'",
+   "options": "Light Vehicle"
+  },
+  {
+   "depends_on": "eval:doc.type_of_asset == 'Light Vehicle'",
+   "fetch_from": "lvehicle_asset.current_location",
+   "fieldname": "lvcurrent_location",
+   "fieldtype": "Data",
+   "label": "Currrent Location",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.equipment_asset && doc.type_of_asset == 'Equipment'",
+   "fieldname": "equipment_table",
+   "fieldtype": "Table",
+   "label": "Equipment Table",
+   "options": "Equipment AA Table"
+  },
+  {
+   "depends_on": "eval:doc.hvehicle_asset && doc.type_of_asset == 'Heavy vehicle'",
+   "fieldname": "heavy_vehicle_table",
+   "fieldtype": "Table",
+   "label": "Heavy Vehicle Table",
+   "options": "Heavy Vehicle AA Table",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.lvehicle_asset && doc.type_of_asset == 'Light vehicle'",
+   "fieldname": "light_vehicle_table",
+   "fieldtype": "Table",
+   "label": "Light Vehicle Table",
+   "options": "Light Vehicle AA Table",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.tool_asset && doc.type_of_asset == 'Tools'",
+   "fieldname": "tools_table",
+   "fieldtype": "Table",
+   "label": "Tools table",
+   "options": "Tools AA Table",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type_of_asset == \"Heavy Vehicle\"",
+   "fetch_from": "hvehicle_asset.vehicle_type",
+   "fieldname": "hvasset_name",
+   "fieldtype": "Data",
+   "label": "Asset Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type_of_asset == 'Light Vehicle'",
+   "fetch_from": "lvehicle_asset.vehicle_type",
+   "fieldname": "lvasset_name",
+   "fieldtype": "Data",
+   "label": "Asset Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type_of_asset == \"Heavy Vehicle\"",
+   "fieldname": "hvehicle_asset",
+   "fieldtype": "Link",
+   "label": "Asset",
+   "mandatory_depends_on": "eval:doc.type_of_asset == \"Heavy Vehicle\"",
+   "options": "Heavy Vehicle"
+  },
+  {
+   "depends_on": "eval:doc.type_of_asset == \"Heavy Vehicle\"",
+   "fetch_from": "hvehicle_asset.current_location",
+   "fieldname": "hvcurrent_location",
+   "fieldtype": "Data",
+   "label": "Current Location",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.availability == \"Available\"",
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "read_only_depends_on": "eval:doc.workflow_state == 'Request Declined'"
+  },
+  {
+   "fieldname": "allocation_record_section",
+   "fieldtype": "Section Break",
+   "label": "Allocation Record"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-27 15:05:36.941765",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Assets Allocation Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

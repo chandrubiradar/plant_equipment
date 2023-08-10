@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-25 14:23:29.410300",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "vehicle_type",
+  "vehicle_no",
+  "stl_compliance_required",
+  "stl_compliance_expiry",
+  "last_service_date",
+  "column_break_7",
+  "running_kms",
+  "due",
+  "next_service_km",
+  "mileage",
+  "next_service_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Link",
+   "label": "Vehicle Type",
+   "options": "Vehicle Type"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Data",
+   "label": "Vehicle No"
+  },
+  {
+   "fieldname": "stl_compliance_required",
+   "fieldtype": "Select",
+   "label": "STL Compliance Required",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "stl_compliance_expiry",
+   "fieldtype": "Date",
+   "label": "STL Compliance Expiry"
+  },
+  {
+   "fieldname": "last_service_date",
+   "fieldtype": "Date",
+   "label": "Last Service date"
+  },
+  {
+   "fieldname": "next_service_date",
+   "fieldtype": "Date",
+   "label": "Next Service Date"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "5000",
+   "fieldname": "due",
+   "fieldtype": "Int",
+   "label": "Due",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mileage",
+   "fieldtype": "Data",
+   "label": "Mileage"
+  },
+  {
+   "fieldname": "running_kms",
+   "fieldtype": "Int",
+   "label": "Running KMs"
+  },
+  {
+   "fieldname": "next_service_km",
+   "fieldtype": "Int",
+   "label": "Next Service KM"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-08-04 16:51:24.106677",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Heavy Vehicle Service",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

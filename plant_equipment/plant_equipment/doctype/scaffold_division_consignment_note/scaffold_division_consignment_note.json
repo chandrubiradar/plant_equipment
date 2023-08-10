@@ -1,0 +1,197 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-09 19:35:39.050792",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "to",
+  "transported_by",
+  "column_break_3",
+  "from",
+  "date",
+  "section_break_6",
+  "table_7",
+  "table_8",
+  "table_9",
+  "column_break_10",
+  "table_11",
+  "table_12",
+  "section_break_13",
+  "sent_by",
+  "received_by",
+  "received_by2",
+  "column_break_17",
+  "sign",
+  "sign2",
+  "sign3",
+  "column_break_21",
+  "indicator",
+  "indicator2",
+  "indicator3",
+  "column_break_25",
+  "date2",
+  "date3",
+  "date4"
+ ],
+ "fields": [
+  {
+   "fieldname": "to",
+   "fieldtype": "Data",
+   "label": "To"
+  },
+  {
+   "fieldname": "transported_by",
+   "fieldtype": "Data",
+   "label": "Transported By"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Data",
+   "label": "From"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_7",
+   "fieldtype": "Table",
+   "options": "Tubes Consignment Table"
+  },
+  {
+   "fieldname": "table_8",
+   "fieldtype": "Table",
+   "options": "Boards Consignment Table"
+  },
+  {
+   "fieldname": "table_9",
+   "fieldtype": "Table",
+   "options": "Fittings Consignment Table"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "table_11",
+   "fieldtype": "Table",
+   "options": "Cuplock Consignment Table"
+  },
+  {
+   "fieldname": "table_12",
+   "fieldtype": "Table",
+   "options": "Pole Ladders Consignment Table"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sent_by",
+   "fieldtype": "Data",
+   "label": "Sent By"
+  },
+  {
+   "fieldname": "received_by",
+   "fieldtype": "Data",
+   "label": "Received By"
+  },
+  {
+   "fieldname": "received_by2",
+   "fieldtype": "Data",
+   "label": "Received By"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sign",
+   "fieldtype": "Attach",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "sign2",
+   "fieldtype": "Attach",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "sign3",
+   "fieldtype": "Attach",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "indicator",
+   "fieldtype": "Data",
+   "label": "Ref Indicator"
+  },
+  {
+   "fieldname": "indicator2",
+   "fieldtype": "Data",
+   "label": "Ref Indicator"
+  },
+  {
+   "fieldname": "indicator3",
+   "fieldtype": "Data",
+   "label": "Ref Indicator"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date2",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "date3",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "date4",
+   "fieldtype": "Date",
+   "label": "Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-09 19:48:56.923138",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Scaffold Division Consignment Note",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

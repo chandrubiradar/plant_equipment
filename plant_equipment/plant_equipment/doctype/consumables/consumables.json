@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-10 14:03:32.681667",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "item",
+  "month",
+  "column_break_3",
+  "previous_stock",
+  "month_end_stock",
+  "link_doc",
+  "doc",
+  "section_break_6",
+  "table_7",
+  "total"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Data",
+   "label": "Month"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "previous_stock",
+   "fieldtype": "Data",
+   "label": "Previous Stock"
+  },
+  {
+   "fieldname": "month_end_stock",
+   "fieldtype": "Data",
+   "label": "Month End Stock"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_7",
+   "fieldtype": "Table",
+   "options": "Scaffolding Tools Table"
+  },
+  {
+   "default": "0",
+   "fieldname": "total",
+   "fieldtype": "Int",
+   "label": "Total"
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Contract"
+  },
+  {
+   "fieldname": "link_doc",
+   "fieldtype": "Link",
+   "label": "Link Doc",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "doc",
+   "fieldtype": "Dynamic Link",
+   "label": "Doc",
+   "options": "link_doc"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-27 20:25:21.893415",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Consumables",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-12 17:52:30.489408",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "vehice",
+  "vehicle_type",
+  "vehicle_no",
+  "stl_compliance_expiry",
+  "column_break_4",
+  "service_done",
+  "next_service_due",
+  "next_service",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fetch_from": "vehice.vehicle_type",
+   "fieldname": "vehicle_type",
+   "fieldtype": "Data",
+   "label": "Vehicle Type"
+  },
+  {
+   "fetch_from": "vehice.vehicle_no",
+   "fieldname": "vehicle_no",
+   "fieldtype": "Data",
+   "label": "Vehicle No"
+  },
+  {
+   "fieldname": "stl_compliance_expiry",
+   "fieldtype": "Data",
+   "label": "STL compliance expiry"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "service_done",
+   "fieldtype": "Int",
+   "label": "Service Done (Km)"
+  },
+  {
+   "default": "0",
+   "fieldname": "next_service_due",
+   "fieldtype": "Int",
+   "label": "Next Service Due(Km)"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "next_service",
+   "fieldtype": "Int",
+   "label": "Next Service"
+  },
+  {
+   "fieldname": "vehice",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Vehice",
+   "options": "Vehicle List"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-07-20 00:20:00.612552",
+ "modified_by": "Administrator",
+ "module": "Plant Equipment",
+ "name": "Light Vehicle  Service",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
